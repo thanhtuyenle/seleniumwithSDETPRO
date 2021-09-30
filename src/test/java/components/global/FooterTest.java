@@ -1,6 +1,6 @@
 package components.global;
 
-import driver.DriverFactory;
+import driver.DriverChrome;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -10,7 +10,7 @@ import java.util.List;
 
 public class FooterTest {
     public static void main(String[] args) {
-        WebDriver driver = DriverFactory.getChromeDriver();
+        WebDriver driver = DriverChrome.getChromeDriver();
         try {
             testHomepageFooter(driver);
             testCategoryFooter(driver);

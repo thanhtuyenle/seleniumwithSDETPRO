@@ -1,0 +1,18 @@
+package models.pages.computer;
+
+import models.components.product.CheapComputerEssentialComponent;
+import models.pages.ItemDetailsPage;
+import org.openqa.selenium.WebDriver;
+
+public class CheapComputerItemDetailsPage extends ItemDetailsPage {
+    private final WebDriver driver;
+    public CheapComputerItemDetailsPage(WebDriver driver) {
+        super(driver);
+        this.driver = driver;
+    }
+
+    public CheapComputerEssentialComponent cheapComputerEssentialComponent() {
+        return new CheapComputerEssentialComponent(driver);
+    }
+
+}

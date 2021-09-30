@@ -1,8 +1,6 @@
 package tests.authentication;
 
-import com.oracle.tools.packager.Log;
-import driver.DriverFactory;
-import models.pages.TheInternetLoginPage;
+import driver.DriverChrome;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -11,7 +9,7 @@ import testflows.LoginFlow;
 public class Login {
     @Test(groups = {"regression", "smoke"})
     public void loginWithValidCredentials() {
-        WebDriver driver = DriverFactory.getChromeDriver();
+        WebDriver driver = DriverChrome.getChromeDriver();
         final String username = "tomsmith";
         final String password = "SuperSecretPassword!";
         try {
@@ -26,7 +24,7 @@ public class Login {
 
     @Test(groups = {"regression"}, dataProvider = "wrongLoginData")
     public void loginWithInvalidCredentials(String username, String password) {
-        WebDriver driver = DriverFactory.getChromeDriver();
+        WebDriver driver = DriverChrome.getChromeDriver();
         try {
             driver.get("https://the-internet.herokuapp.com/login");
             LoginFlow loginFlow = new LoginFlow(driver);

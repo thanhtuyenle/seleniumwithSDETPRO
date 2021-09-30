@@ -1,6 +1,6 @@
 package models.pages;
 
-import driver.DriverFactory;
+import driver.DriverChrome;
 import models.components.global.FooterComponent;
 import models.components.global.HeaderComponent;
 import org.openqa.selenium.WebDriver;
@@ -26,7 +26,7 @@ public class HomePage {
     }
 
     public static void main(String[] args) {
-        WebDriver driver = DriverFactory.getChromeDriver();
+        WebDriver driver = DriverChrome.getChromeDriver();
         try {
             HomePage homePage = new HomePage(driver);
             driver.get("http://demowebshop.tricentis.com/");

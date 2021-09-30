@@ -1,6 +1,6 @@
 package apilearning;
 
-import driver.DriverFactory;
+import driver.DriverChrome;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
@@ -8,7 +8,7 @@ import org.openqa.selenium.WebElement;
 
 public class FormHandling {
     public static void main(String[] args) {
-        WebDriver driver = DriverFactory.getChromeDriver();
+        WebDriver driver = DriverChrome.getChromeDriver();
         try {
             driver.get("https://the-internet.herokuapp.com/login");
 

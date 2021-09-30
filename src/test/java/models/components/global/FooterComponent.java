@@ -6,8 +6,6 @@ import models.components.global.footer.MenuInformationComponent;
 import models.components.global.footer.MenuMyAccountComponent;
 import org.openqa.selenium.WebDriver;
 
-import java.awt.*;
-
 public class FooterComponent {
     private final WebDriver driver;
 
