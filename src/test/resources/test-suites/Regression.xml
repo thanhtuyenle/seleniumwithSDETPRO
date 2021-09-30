@@ -4,7 +4,7 @@
     <test name="Computer Order flows">
         <classes>
             <class name="tests.order.BuildCheapComputerTest"/>
-            <!--<class name="tests.order.BuildStandardComputerTest"/>-->
+            <class name="tests.order.BuildStandardComputerTest"/>
         </classes>
     </test>
 </suite>
